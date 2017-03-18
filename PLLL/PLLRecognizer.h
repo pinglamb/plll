@@ -11,14 +11,55 @@
 typedef enum {
     PLLAa,
     PLLAb,
+    PLLE,
+    PLLF,
     PLLGa,
     PLLGb,
     PLLGc,
     PLLGd,
+    PLLH,
+    PLLJa,
+    PLLJb,
+    PLLNa,
+    PLLNb,
+    PLLT,
     PLLRa,
     PLLRb,
+    PLLUa,
+    PLLUb,
+    PLLV,
+    PLLY,
+    PLLZ,
+    PLLSkip,
     PLLError,
 } PLLCase;
+
+#define PLLNames [NSArray arrayWithObjects: \
+    @"Aa", \
+    @"Ab", \
+    @"E", \
+    @"F", \
+    @"Ga", \
+    @"Gb", \
+    @"Gc", \
+    @"Gd", \
+    @"H", \
+    @"Ja", \
+    @"Jb", \
+    @"Na", \
+    @"Nb", \
+    @"T", \
+    @"Ra", \
+    @"Rb", \
+    @"Ua", \
+    @"Ub", \
+    @"V", \
+    @"Y", \
+    @"Z", \
+    @"PLLSkip", \
+    @"???", \
+    nil \
+]
 
 @interface PLLRecognizer : NSObject
 

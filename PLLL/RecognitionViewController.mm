@@ -26,10 +26,10 @@
     [self.sixthColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[5]]];
 
     PLLRecognizer *recognizer = [[PLLRecognizer alloc] init];
-    PLLCase result = [recognizer recognize:self.sixColors];
-    for (NSString* step in recognizer.steps) {
-        NSLog(@"%@", step);
-    }
+    PLLCase pll = [recognizer recognize:self.sixColors];
+    [self.reasonsLabel setText:[recognizer.steps componentsJoinedByString:@"\n"]];
+    [self.reasonsLabel sizeToFit];
+    [self.pllCaseLabel setText:PLLNames[pll]];
 }
 
 - (UIColor*) getUIColorFromString: (NSString*) stringRepresentation {

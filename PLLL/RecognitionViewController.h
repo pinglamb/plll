@@ -19,4 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *fifthColorButton;
 @property (weak, nonatomic) IBOutlet UIButton *sixthColorButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *pllCaseLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reasonsLabel;
+
 @end
