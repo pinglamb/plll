@@ -7,12 +7,15 @@
 //
 
 #import "CorrectionViewController.h"
+#import "RecognitionViewController.h"
 
 @interface CorrectionViewController ()
 
 @end
 
 @implementation CorrectionViewController
+
+@synthesize sixColors = _sixColors;
 
 - (void)viewDidLoad {
     [super viewDidLoad];    // Do any additional setup after loading the view.
@@ -21,11 +24,10 @@
     [self setColorsFromArray:self.currentFaceIndex];
     self.faceImageView.image = [self.faceImages objectAtIndex:self.currentFaceIndex];
 
+    self.sixColors = [[NSMutableArray alloc] initWithCapacity:6];
+
     [self.previousFaceButton setTitle:@"Retake" forState:UIControlStateNormal];
     [self.previousFaceButton setTitle:@"Retake" forState:UIControlStateHighlighted];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 }
 
 - (UIColor*) getUIColorFromString: (NSString*) stringRepresentation {
@@ -49,7 +51,7 @@
     [self.thirdPatchButton setBackgroundColor: [self getUIColorFromString:self.faceColors[startIndex + 2]]];
     [self.fourthPatchButton setBackgroundColor: [self getUIColorFromString:self.faceColors[startIndex + 3]]];
     [self.fifthPatchButton setBackgroundColor: [self getUIColorFromString:self.faceColors[startIndex + 4]]];
-    [self.sixtPatchButton setBackgroundColor: [self getUIColorFromString:self.faceColors[startIndex + 5]]];
+    [self.sixthPatchButton setBackgroundColor: [self getUIColorFromString:self.faceColors[startIndex + 5]]];
     [self.seventhPatchButton setBackgroundColor: [self getUIColorFromString:self.faceColors[startIndex + 6]]];
     [self.eightPatchButton setBackgroundColor: [self getUIColorFromString:self.faceColors[startIndex + 7]]];
     [self.ninethPatchButton setBackgroundColor: [self getUIColorFromString:self.faceColors[startIndex + 8]]];
@@ -62,7 +64,7 @@
 
     self.fourthPatchButton.layer.borderWidth = 0;
     self.fifthPatchButton.layer.borderWidth = 0;
-    self.sixtPatchButton.layer.borderWidth = 0;
+    self.sixthPatchButton.layer.borderWidth = 0;
 
     self.seventhPatchButton.layer.borderWidth = 0;
     self.eightPatchButton.layer.borderWidth = 0;
@@ -73,16 +75,6 @@
     button.layer.borderWidth = 5;
     button.layer.borderColor = [UIColor blackColor].CGColor;
 }
-
-/*
- #pragma mark - Navigation
-
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 - (IBAction)didPressFirstPatchButton:(UIButton *)sender {
     [self removeAllBorders];
@@ -168,13 +160,20 @@
 
 - (IBAction)didPressNextFaceButton:(id)sender
 {
-    if([[self.nextFaceButton titleForState:UIControlStateNormal] isEqualToString:@"DONE"])
-    {
-        for (NSString* color in self.faceColors) {
+    if([[self.nextFaceButton titleForState:UIControlStateNormal] isEqualToString:@"DONE"]) {
+        [self.sixColors addObject:[self.faceColors objectAtIndex:9]];
+        [self.sixColors addObject:[self.faceColors objectAtIndex:10]];
+        [self.sixColors addObject:[self.faceColors objectAtIndex:11]];
+        [self.sixColors addObject:[self.faceColors objectAtIndex:18]];
+        [self.sixColors addObject:[self.faceColors objectAtIndex:19]];
+        [self.sixColors addObject:[self.faceColors objectAtIndex:20]];
+
+        NSLog(@"Six Colors:");
+        for (NSString* color in self.sixColors) {
             NSLog(@"%@", color);
         }
-        // [self performSegueWithIdentifier:@"correctionToSolveSegue" sender:self];
-        return;
+
+        [self performSegueWithIdentifier:@"recognitionSegue" sender:self];
     } else {
         self.currentFaceIndex = 2;
         [self setColorsFromArray:self.currentFaceIndex];
@@ -193,7 +192,6 @@
 - (IBAction)didPressPreviousFaceButton:(id)sender {
     if([[self.previousFaceButton titleForState:UIControlStateNormal] isEqualToString:@"Retake"]) {
         [self dismissViewControllerAnimated:YES completion:nil];
-        return;
     } else {
         self.currentFaceIndex = 1;
         [self setColorsFromArray:self.currentFaceIndex];
@@ -204,6 +202,15 @@
         [self.nextFaceButton setTitle:@"Next" forState:UIControlStateHighlighted];
         [self.previousFaceButton setTitle:@"Retake" forState:UIControlStateNormal];
         [self.previousFaceButton setTitle:@"Retake" forState:UIControlStateHighlighted];
+    }
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqual: @"recognitionSegue"]) {
+        RecognitionViewController *destinationVC = [segue destinationViewController];
+        destinationVC.sixColors = self.sixColors;
     }
 }
 

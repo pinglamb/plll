@@ -605,13 +605,123 @@
                         <outlet property="previousFaceButton" destination="7fN-uL-tqf" id="dGA-C4-t0b"/>
                         <outlet property="secondPatchButton" destination="5y3-dD-Dwa" id="nbf-d5-lyQ"/>
                         <outlet property="seventhPatchButton" destination="H8V-dl-Ood" id="4Yj-tJ-k42"/>
-                        <outlet property="sixtPatchButton" destination="5ju-dM-M7G" id="utM-gI-AK0"/>
+                        <outlet property="sixthPatchButton" destination="5ju-dM-M7G" id="csJ-XH-fgP"/>
                         <outlet property="thirdPatchButton" destination="fnQ-f4-3uy" id="531-W8-ej2"/>
+                        <segue destination="vJ8-qj-ECS" kind="show" identifier="recognitionSegue" id="Etr-Qa-7iG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Vk-sH-8Fx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1783" y="139"/>
+        </scene>
+        <!--Recognition View Controller-->
+        <scene sceneID="Nv2-yL-VzP">
+            <objects>
+                <viewController id="vJ8-qj-ECS" customClass="RecognitionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WCb-m8-A0z"/>
+                        <viewControllerLayoutGuide type="bottom" id="kfR-6e-25v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="snj-hD-gDg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-side PLL Recognition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysf-MM-86h">
+                                <rect key="frame" x="61" y="40" width="253" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="JGc-LP-B8L">
+                                <rect key="frame" x="16" y="103" width="343" height="49.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdu-bh-uRV" userLabel="Red Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="49.5"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Fdu-bh-uRV" secondAttribute="height" multiplier="1:1" id="B5x-i8-xCj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressRedColorButton:" destination="c2j-pH-Bdj" eventType="touchUpInside" id="Rex-Gs-x6b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFV-7l-4Ul" userLabel="Orange Button">
+                                        <rect key="frame" x="58.5" y="0.0" width="50" height="49.5"/>
+                                        <color key="backgroundColor" red="1" green="0.49823090809999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jz-5o-lOF" userLabel="Green Button">
+                                        <rect key="frame" x="117.5" y="0.0" width="49.5" height="49.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQd-bt-HRR" userLabel="Blue Button">
+                                        <rect key="frame" x="176" y="0.0" width="49.5" height="49.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWK-pD-aQu" userLabel="Yellow Button">
+                                        <rect key="frame" x="234.5" y="0.0" width="50" height="49.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6J-on-dLH" userLabel="White Button">
+                                        <rect key="frame" x="293.5" y="0.0" width="49.5" height="49.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.63921568630000003" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ysf-MM-86h" firstAttribute="top" secondItem="WCb-m8-A0z" secondAttribute="bottom" constant="20" id="1Jd-u9-USK"/>
+                            <constraint firstItem="JGc-LP-B8L" firstAttribute="leading" secondItem="snj-hD-gDg" secondAttribute="leadingMargin" id="HGj-Az-kql"/>
+                            <constraint firstItem="JGc-LP-B8L" firstAttribute="top" secondItem="Ysf-MM-86h" secondAttribute="bottom" constant="30" id="QYk-h6-LHa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JGc-LP-B8L" secondAttribute="trailing" id="jNh-B8-NzE"/>
+                            <constraint firstItem="Ysf-MM-86h" firstAttribute="centerX" secondItem="snj-hD-gDg" secondAttribute="centerX" id="xkt-7V-tse"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fifthColorButton" destination="KWK-pD-aQu" id="j8k-Fd-kZD"/>
+                        <outlet property="firstColorButton" destination="Fdu-bh-uRV" id="VTp-gT-8rA"/>
+                        <outlet property="fourthColorButton" destination="mQd-bt-HRR" id="bmt-a8-qmh"/>
+                        <outlet property="secondColorButton" destination="xFV-7l-4Ul" id="RQf-xw-EfC"/>
+                        <outlet property="sixthColorButton" destination="X6J-on-dLH" id="tjU-V7-vIJ"/>
+                        <outlet property="thirdColorButton" destination="9jz-5o-lOF" id="ReD-4t-L3o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0r-yA-wd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2606" y="139"/>
         </scene>
     </scenes>
     <resources>

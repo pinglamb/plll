@@ -215,7 +215,6 @@
     [self performSegueWithIdentifier:@"correctionSegue" sender:self];
 }
 
-
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

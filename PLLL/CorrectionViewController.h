@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *thirdPatchButton;
 @property (weak, nonatomic) IBOutlet UIButton *fourthPatchButton;
 @property (weak, nonatomic) IBOutlet UIButton *fifthPatchButton;
-@property (weak, nonatomic) IBOutlet UIButton *sixtPatchButton;
+@property (weak, nonatomic) IBOutlet UIButton *sixthPatchButton;
 @property (weak, nonatomic) IBOutlet UIButton *seventhPatchButton;
 @property (weak, nonatomic) IBOutlet UIButton *eightPatchButton;
 @property (weak, nonatomic) IBOutlet UIButton *ninethPatchButton;
@@ -31,6 +31,7 @@
 
 @property (weak, nonatomic) NSMutableArray *faceColors;
 @property (weak, nonatomic) NSMutableArray *faceImages;
+@property NSMutableArray *sixColors;
 
 - (void) setColorsFromArray: (NSInteger) faceIndex;
 

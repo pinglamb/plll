@@ -13,6 +13,7 @@
 		821B34EF1E7DA08E00361CE7 /* ColorDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 821B34E81E7DA08E00361CE7 /* ColorDetector.cpp */; };
 		821B34F01E7DA08E00361CE7 /* EdgeBasedCubeDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 821B34EA1E7DA08E00361CE7 /* EdgeBasedCubeDetector.cpp */; };
 		821B34F31E7DA8B000361CE7 /* CorrectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 821B34F21E7DA8B000361CE7 /* CorrectionViewController.mm */; };
+		821B34F61E7DB5C600361CE7 /* RecognitionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */; };
 		82FD9A4A1E7D97F400B619D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A491E7D97F400B619D8 /* main.m */; };
 		82FD9A4D1E7D97F400B619D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A4C1E7D97F400B619D8 /* AppDelegate.m */; };
 		82FD9A501E7D97F400B619D8 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A4F1E7D97F400B619D8 /* MenuViewController.m */; };
@@ -35,6 +36,8 @@
 		821B34EC1E7DA08E00361CE7 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
 		821B34F11E7DA8B000361CE7 /* CorrectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorrectionViewController.h; sourceTree = "<group>"; };
 		821B34F21E7DA8B000361CE7 /* CorrectionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CorrectionViewController.mm; sourceTree = "<group>"; };
+		821B34F41E7DB5C600361CE7 /* RecognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognitionViewController.h; sourceTree = "<group>"; };
+		821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecognitionViewController.mm; sourceTree = "<group>"; };
 		82FD9A451E7D97F400B619D8 /* PLLL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLLL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FD9A491E7D97F400B619D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82FD9A4B1E7D97F400B619D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				821B34DF1E7D9F9900361CE7 /* CaptureViewController.mm */,
 				821B34F11E7DA8B000361CE7 /* CorrectionViewController.h */,
 				821B34F21E7DA8B000361CE7 /* CorrectionViewController.mm */,
+				821B34F41E7DB5C600361CE7 /* RecognitionViewController.h */,
+				821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */,
 				82FD9A511E7D97F400B619D8 /* Main.storyboard */,
 				82FD9A541E7D97F400B619D8 /* Assets.xcassets */,
 				82FD9A561E7D97F400B619D8 /* LaunchScreen.storyboard */,
@@ -286,6 +291,7 @@
 				821B34F31E7DA8B000361CE7 /* CorrectionViewController.mm in Sources */,
 				821B34F01E7DA08E00361CE7 /* EdgeBasedCubeDetector.cpp in Sources */,
 				82FD9A4A1E7D97F400B619D8 /* main.m in Sources */,
+				821B34F61E7DB5C600361CE7 /* RecognitionViewController.mm in Sources */,
 				821B34EF1E7DA08E00361CE7 /* ColorDetector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
