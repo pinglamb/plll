@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E144f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="4Q0-U4-tPb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zbz-oh-4Rg">
+                                <rect key="frame" x="62.5" y="238.5" width="250" height="190"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PB-F2-OiO">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XEB-SV-Nfj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="PLL Recognizer"/>
+                                        <connections>
+                                            <segue destination="FKb-Hj-m7f" kind="presentation" id="kSJ-GQ-y0I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hng-4P-Rbk">
+                                        <rect key="frame" x="0.0" y="70" width="250" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="PLL Practice"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJX-nH-ty0">
+                                        <rect key="frame" x="0.0" y="140" width="250" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="PLL Algorithms"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nJX-nH-ty0" firstAttribute="height" secondItem="2PB-F2-OiO" secondAttribute="height" id="3NB-0D-mPE"/>
+                                    <constraint firstItem="Hng-4P-Rbk" firstAttribute="height" secondItem="2PB-F2-OiO" secondAttribute="height" id="Xr4-H0-2aX"/>
+                                    <constraint firstAttribute="width" constant="250" id="YOp-rO-SnO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4Q0-U4-tPb" secondAttribute="trailing" id="4aA-UA-1xI"/>
+                            <constraint firstItem="4Q0-U4-tPb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xvc-MU-xuP"/>
+                            <constraint firstItem="Zbz-oh-4Rg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dnt-Ox-1F9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Q0-U4-tPb" secondAttribute="bottom" id="g71-fw-N63"/>
+                            <constraint firstItem="4Q0-U4-tPb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hDz-hP-IcO"/>
+                            <constraint firstItem="Zbz-oh-4Rg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ttq-2g-q8Z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Capture View Controller-->
+        <scene sceneID="PRe-xl-eDZ">
+            <objects>
+                <viewController id="FKb-Hj-m7f" customClass="CaptureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ckg-38-hBQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="tEE-0s-rAP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CXD-Cc-U1W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cube-image" translatesAutoresizingMaskIntoConstraints="NO" id="tTH-jS-RJB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide" translatesAutoresizingMaskIntoConstraints="NO" id="mj8-SC-5dO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take picture with yellow facing top" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="12J-TP-vhv">
+                                <rect key="frame" x="10" y="40" width="355" height="76"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.63921568630000003" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="V4g-jc-G9P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uy-D8-fha">
+                                <rect key="frame" x="115" y="597" width="145" height="50"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08G-is-ocX" userLabel="Accept Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="08G-is-ocX" secondAttribute="height" multiplier="1:1" id="nyk-Jb-zRc"/>
+                                        </constraints>
+                                        <state key="normal" image="accept-image"/>
+                                        <connections>
+                                            <action selector="didPressAcceptImage:" destination="FKb-Hj-m7f" eventType="touchUpInside" id="HML-uY-5kz"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlr-Cs-ium" userLabel="Reject Button">
+                                        <rect key="frame" x="95" y="0.0" width="50" height="50"/>
+                                        <state key="normal" image="reject-image"/>
+                                        <connections>
+                                            <action selector="didPressRetakeImage:" destination="FKb-Hj-m7f" eventType="touchUpInside" id="eQD-oM-ZM9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dlr-Cs-ium" firstAttribute="centerY" secondItem="6uy-D8-fha" secondAttribute="centerY" id="0qc-hO-1Sf"/>
+                                    <constraint firstItem="dlr-Cs-ium" firstAttribute="width" secondItem="08G-is-ocX" secondAttribute="width" id="6ED-rC-4Do"/>
+                                    <constraint firstItem="08G-is-ocX" firstAttribute="height" secondItem="6uy-D8-fha" secondAttribute="height" id="BJc-fm-IH0"/>
+                                    <constraint firstAttribute="trailing" secondItem="dlr-Cs-ium" secondAttribute="trailing" id="Q5a-UG-fax"/>
+                                    <constraint firstAttribute="height" constant="50" id="ThS-qP-0A8">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                    <constraint firstItem="08G-is-ocX" firstAttribute="centerY" secondItem="6uy-D8-fha" secondAttribute="centerY" id="ceI-Qp-tSQ"/>
+                                    <constraint firstItem="dlr-Cs-ium" firstAttribute="leading" secondItem="08G-is-ocX" secondAttribute="trailing" constant="45" id="fxl-bJ-Cqh">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                    <constraint firstItem="08G-is-ocX" firstAttribute="leading" secondItem="6uy-D8-fha" secondAttribute="leading" id="hc4-K7-OKa"/>
+                                    <constraint firstItem="dlr-Cs-ium" firstAttribute="height" secondItem="08G-is-ocX" secondAttribute="height" id="z6M-wA-ToH"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEx-k7-UKI" userLabel="Capture Photo Button">
+                                <rect key="frame" x="162.5" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JdM-gM-wGt">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="50" id="UcU-UO-QsM">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" image="camera-button"/>
+                                <connections>
+                                    <action selector="didPressCaptureImage:" destination="FKb-Hj-m7f" eventType="touchUpInside" id="8Ca-a2-F1r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tEE-0s-rAP" firstAttribute="top" secondItem="6uy-D8-fha" secondAttribute="bottom" constant="20" id="2xz-xZ-CJX"/>
+                            <constraint firstItem="12J-TP-vhv" firstAttribute="top" secondItem="ckg-38-hBQ" secondAttribute="bottom" constant="20" id="Fc2-Wq-0Nx"/>
+                            <constraint firstItem="12J-TP-vhv" firstAttribute="leading" secondItem="CXD-Cc-U1W" secondAttribute="leading" constant="10" id="I60-nS-f5r"/>
+                            <constraint firstItem="tEE-0s-rAP" firstAttribute="top" secondItem="mj8-SC-5dO" secondAttribute="bottom" id="Ikz-N8-fwD"/>
+                            <constraint firstAttribute="trailing" secondItem="mj8-SC-5dO" secondAttribute="trailing" id="MBh-ks-ax2"/>
+                            <constraint firstItem="mj8-SC-5dO" firstAttribute="leading" secondItem="CXD-Cc-U1W" secondAttribute="leading" id="Yw1-Oz-hsg"/>
+                            <constraint firstItem="6uy-D8-fha" firstAttribute="centerX" secondItem="CXD-Cc-U1W" secondAttribute="centerX" id="b5e-JB-dZs"/>
+                            <constraint firstItem="mj8-SC-5dO" firstAttribute="top" secondItem="CXD-Cc-U1W" secondAttribute="top" id="l35-SP-nKL"/>
+                            <constraint firstItem="bEx-k7-UKI" firstAttribute="centerY" secondItem="6uy-D8-fha" secondAttribute="centerY" id="l5G-C0-Hie"/>
+                            <constraint firstItem="bEx-k7-UKI" firstAttribute="centerX" secondItem="CXD-Cc-U1W" secondAttribute="centerX" id="vL2-KE-hzU"/>
+                            <constraint firstAttribute="trailing" secondItem="12J-TP-vhv" secondAttribute="trailing" constant="10" id="z42-7R-cf3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="acceptButton" destination="08G-is-ocX" id="2LG-1u-Sil"/>
+                        <outlet property="cameraImageView" destination="tTH-jS-RJB" id="3Eu-q1-RfU"/>
+                        <outlet property="captureImageButton" destination="bEx-k7-UKI" id="W79-uE-MBK"/>
+                        <outlet property="instructionsLabel" destination="12J-TP-vhv" id="LV2-dt-SRG"/>
+                        <outlet property="overlayImageView" destination="mj8-SC-5dO" id="CfH-KK-4MK"/>
+                        <outlet property="rejectButton" destination="dlr-Cs-ium" id="YBM-vB-Zks"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLv-ah-DLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.60000000000002" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="accept-image" width="300" height="300"/>
+        <image name="bg" width="540" height="960"/>
+        <image name="camera-button" width="256" height="256"/>
+        <image name="cube-image" width="952" height="1270"/>
+        <image name="guide" width="360" height="640"/>
+        <image name="reject-image" width="225" height="225"/>
+    </resources>
+</document>
