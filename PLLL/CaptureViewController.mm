@@ -7,6 +7,7 @@
 //
 
 #import "CaptureViewController.h"
+#import "CorrectionViewController.h"
 
 @interface CaptureViewController ()
 
@@ -211,7 +212,18 @@
         [self saveUIImageToDocumentsFolder:faceImage named:fileName];
     }
 
-    // [self performSegueWithIdentifier:@"captureToCorrectionSegue" sender:self];
+    [self performSegueWithIdentifier:@"correctionSegue" sender:self];
+}
+
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqual: @"correctionSegue"]) {
+        CorrectionViewController *destinationVC = [segue destinationViewController];
+        destinationVC.faceColors = self.acceptedColorsArray;
+        destinationVC.faceImages = self.faceImagesArray;
+    }
 }
 
 @end
