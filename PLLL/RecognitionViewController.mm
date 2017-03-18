@@ -7,6 +7,7 @@
 //
 
 #import "RecognitionViewController.h"
+#import "PLLRecognizer.h"
 
 @interface RecognitionViewController ()
 
@@ -24,6 +25,11 @@
     [self.fifthColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[4]]];
     [self.sixthColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[5]]];
 
+    PLLRecognizer *recognizer = [[PLLRecognizer alloc] init];
+    PLLCase result = [recognizer recognize:self.sixColors];
+    for (NSString* step in recognizer.steps) {
+        NSLog(@"%@", step);
+    }
 }
 
 - (UIColor*) getUIColorFromString: (NSString*) stringRepresentation {

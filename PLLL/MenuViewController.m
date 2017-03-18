@@ -14,4 +14,7 @@
 
 @implementation MenuViewController
 
+- (IBAction)actionDidComplete:(UIStoryboardSegue *)segue {
+}
+
 @end

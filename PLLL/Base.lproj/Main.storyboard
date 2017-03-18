@@ -626,15 +626,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-side PLL Recognition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysf-MM-86h">
-                                <rect key="frame" x="61" y="40" width="253" height="33"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
-                                </variation>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="JGc-LP-B8L">
                                 <rect key="frame" x="16" y="103" width="343" height="49.5"/>
                                 <subviews>
@@ -700,12 +691,40 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-side PLL Recognition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysf-MM-86h">
+                                <rect key="frame" x="61" y="40" width="253" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iar-kX-4mM">
+                                <rect key="frame" x="147" y="587" width="80" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bPU-lm-yo4"/>
+                                    <constraint firstAttribute="width" constant="80" id="lHn-ay-i7g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="45"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="gDr-7B-aL2" kind="unwind" unwindAction="actionDidComplete:" id="TxG-ze-7iv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.63921568630000003" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ysf-MM-86h" firstAttribute="top" secondItem="WCb-m8-A0z" secondAttribute="bottom" constant="20" id="1Jd-u9-USK"/>
                             <constraint firstItem="JGc-LP-B8L" firstAttribute="leading" secondItem="snj-hD-gDg" secondAttribute="leadingMargin" id="HGj-Az-kql"/>
+                            <constraint firstItem="kfR-6e-25v" firstAttribute="top" secondItem="Iar-kX-4mM" secondAttribute="bottom" constant="20" id="IK0-Vm-lYJ"/>
                             <constraint firstItem="JGc-LP-B8L" firstAttribute="top" secondItem="Ysf-MM-86h" secondAttribute="bottom" constant="30" id="QYk-h6-LHa"/>
+                            <constraint firstItem="Iar-kX-4mM" firstAttribute="centerX" secondItem="snj-hD-gDg" secondAttribute="centerX" id="iew-Oo-QAK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JGc-LP-B8L" secondAttribute="trailing" id="jNh-B8-NzE"/>
                             <constraint firstItem="Ysf-MM-86h" firstAttribute="centerX" secondItem="snj-hD-gDg" secondAttribute="centerX" id="xkt-7V-tse"/>
                         </constraints>
@@ -720,6 +739,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0r-yA-wd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gDr-7B-aL2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2606" y="139"/>
         </scene>

@@ -14,6 +14,7 @@
 		821B34F01E7DA08E00361CE7 /* EdgeBasedCubeDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 821B34EA1E7DA08E00361CE7 /* EdgeBasedCubeDetector.cpp */; };
 		821B34F31E7DA8B000361CE7 /* CorrectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 821B34F21E7DA8B000361CE7 /* CorrectionViewController.mm */; };
 		821B34F61E7DB5C600361CE7 /* RecognitionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */; };
+		821B34FC1E7DBBDE00361CE7 /* PLLRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 821B34FB1E7DBBDE00361CE7 /* PLLRecognizer.m */; };
 		82FD9A4A1E7D97F400B619D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A491E7D97F400B619D8 /* main.m */; };
 		82FD9A4D1E7D97F400B619D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A4C1E7D97F400B619D8 /* AppDelegate.m */; };
 		82FD9A501E7D97F400B619D8 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A4F1E7D97F400B619D8 /* MenuViewController.m */; };
@@ -38,6 +39,8 @@
 		821B34F21E7DA8B000361CE7 /* CorrectionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CorrectionViewController.mm; sourceTree = "<group>"; };
 		821B34F41E7DB5C600361CE7 /* RecognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognitionViewController.h; sourceTree = "<group>"; };
 		821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecognitionViewController.mm; sourceTree = "<group>"; };
+		821B34FB1E7DBBDE00361CE7 /* PLLRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLLRecognizer.m; sourceTree = "<group>"; };
+		821B34FE1E7DBC2300361CE7 /* PLLRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLLRecognizer.h; sourceTree = "<group>"; };
 		82FD9A451E7D97F400B619D8 /* PLLL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLLL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FD9A491E7D97F400B619D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82FD9A4B1E7D97F400B619D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +106,21 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		821B34F81E7DBB8700361CE7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				82FD9A4E1E7D97F400B619D8 /* MenuViewController.h */,
+				82FD9A4F1E7D97F400B619D8 /* MenuViewController.m */,
+				821B34DE1E7D9F9900361CE7 /* CaptureViewController.h */,
+				821B34DF1E7D9F9900361CE7 /* CaptureViewController.mm */,
+				821B34F11E7DA8B000361CE7 /* CorrectionViewController.h */,
+				821B34F21E7DA8B000361CE7 /* CorrectionViewController.mm */,
+				821B34F41E7DB5C600361CE7 /* RecognitionViewController.h */,
+				821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		82FD9A3C1E7D97F400B619D8 = {
 			isa = PBXGroup;
 			children = (
@@ -125,19 +143,14 @@
 		82FD9A471E7D97F400B619D8 /* PLLL */ = {
 			isa = PBXGroup;
 			children = (
-				82FD9A4E1E7D97F400B619D8 /* MenuViewController.h */,
-				82FD9A4F1E7D97F400B619D8 /* MenuViewController.m */,
-				821B34DE1E7D9F9900361CE7 /* CaptureViewController.h */,
-				821B34DF1E7D9F9900361CE7 /* CaptureViewController.mm */,
-				821B34F11E7DA8B000361CE7 /* CorrectionViewController.h */,
-				821B34F21E7DA8B000361CE7 /* CorrectionViewController.mm */,
-				821B34F41E7DB5C600361CE7 /* RecognitionViewController.h */,
-				821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */,
+				821B34F81E7DBB8700361CE7 /* View Controllers */,
 				82FD9A511E7D97F400B619D8 /* Main.storyboard */,
 				82FD9A541E7D97F400B619D8 /* Assets.xcassets */,
 				82FD9A561E7D97F400B619D8 /* LaunchScreen.storyboard */,
 				82FD9A591E7D97F400B619D8 /* Info.plist */,
 				82FD9A481E7D97F400B619D8 /* Supporting Files */,
+				821B34FE1E7DBC2300361CE7 /* PLLRecognizer.h */,
+				821B34FB1E7DBBDE00361CE7 /* PLLRecognizer.m */,
 			);
 			path = PLLL;
 			sourceTree = "<group>";
@@ -285,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821B34FC1E7DBBDE00361CE7 /* PLLRecognizer.m in Sources */,
 				82FD9A501E7D97F400B619D8 /* MenuViewController.m in Sources */,
 				821B34E01E7D9F9900361CE7 /* CaptureViewController.mm in Sources */,
 				82FD9A4D1E7D97F400B619D8 /* AppDelegate.m in Sources */,

@@ -10,6 +10,7 @@
 
 @interface MenuViewController : UIViewController
 
+- (IBAction)actionDidComplete:(UIStoryboardSegue *)segue;
 
 @end
 
