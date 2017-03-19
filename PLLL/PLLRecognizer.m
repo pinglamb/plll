@@ -443,7 +443,7 @@
             if(num == 3) {
                 // only three unique colours are visible
                 [self.steps addObject:@"Only three unique colors - Gd"];
-                self.adjustment = -1;
+                self.adjustment = 0;
                 return PLLGd;
             } else {
                 // four unique colours are visible
@@ -485,7 +485,7 @@
             } else {
                 // four unique colours are visible
                 [self.steps addObject:@"Four unique colors - Gd"];
-                self.adjustment = 0;
+                self.adjustment = -1;
                 return PLLGd;
             }
         } else {
