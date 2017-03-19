@@ -12,5 +12,6 @@
 @interface PLLAlgorithms : NSObject
 
 + (NSString *)forPLL:(PLLCase)pll;
++ (NSString *)orientationForPLL:(PLLCase)pll;
 
 @end

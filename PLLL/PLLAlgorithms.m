@@ -80,4 +80,53 @@
     }
 }
 
++ (NSString *)orientationForPLL:(PLLCase)pll {
+    switch (pll) {
+        case PLLAa:
+            return @"Headlight facing back";
+        case PLLAb:
+            return @"Headlight at left";
+        case PLLE:
+            return @"Horizontal corners exchange";
+        case PLLF:
+            return @"3x1 block facing front";
+        case PLLGa:
+            return @"Headlight facing front";
+        case PLLGb:
+            return @"Headlight facing front";
+        case PLLGc:
+            return @"Headlight facing front";
+        case PLLGd:
+            return @"Headlight facing front";
+        case PLLH:
+            return @"Rotational Symmertric";
+        case PLLJa:
+            return @"3x1 block at right";
+        case PLLJb:
+            return @"3x1 block at left";
+        case PLLNa:
+            return @"Rotational Symmertric";
+        case PLLNb:
+            return @"Rotational Symmertric";
+        case PLLT:
+            return @"Headlight at left";
+        case PLLRa:
+            return @"Headlight facing front";
+        case PLLRb:
+            return @"Headlight facing front";
+        case PLLUa:
+            return @"3x1 block facing back";
+        case PLLUb:
+            return @"3x1 block facing back";
+        case PLLV:
+            return @"2 Inner blocks on left";
+        case PLLY:
+            return @"2 Outer blocks on right";
+        case PLLZ:
+            return @"Exchange left and front";
+        default:
+            return @"???????";
+    }
+}
+
 @end

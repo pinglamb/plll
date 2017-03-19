@@ -19,6 +19,8 @@
 		821B35041E7E860D00361CE7 /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821B35031E7E860D00361CE7 /* PracticeViewController.m */; };
 		821B35071E7E8D5D00361CE7 /* RecognitionFLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 821B35061E7E8D5D00361CE7 /* RecognitionFLViewController.mm */; };
 		821B35091E7E9C0500361CE7 /* PLLAlgorithms.m in Sources */ = {isa = PBXBuildFile; fileRef = 821B35081E7E9C0500361CE7 /* PLLAlgorithms.m */; };
+		821B350D1E7F263F00361CE7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821B350C1E7F263F00361CE7 /* AlgorithmsViewController.m */; };
+		821B35101E7F28F800361CE7 /* PLLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 821B350F1E7F28F800361CE7 /* PLLTableViewCell.m */; };
 		82FD9A4A1E7D97F400B619D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A491E7D97F400B619D8 /* main.m */; };
 		82FD9A4D1E7D97F400B619D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A4C1E7D97F400B619D8 /* AppDelegate.m */; };
 		82FD9A501E7D97F400B619D8 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A4F1E7D97F400B619D8 /* MenuViewController.m */; };
@@ -53,6 +55,10 @@
 		821B35061E7E8D5D00361CE7 /* RecognitionFLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecognitionFLViewController.mm; sourceTree = "<group>"; };
 		821B35081E7E9C0500361CE7 /* PLLAlgorithms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLLAlgorithms.m; sourceTree = "<group>"; };
 		821B350A1E7E9C1400361CE7 /* PLLAlgorithms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLLAlgorithms.h; sourceTree = "<group>"; };
+		821B350B1E7F263F00361CE7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
+		821B350C1E7F263F00361CE7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
+		821B350E1E7F28F800361CE7 /* PLLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLLTableViewCell.h; sourceTree = "<group>"; };
+		821B350F1E7F28F800361CE7 /* PLLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLLTableViewCell.m; sourceTree = "<group>"; };
 		82FD9A451E7D97F400B619D8 /* PLLL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLLL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FD9A491E7D97F400B619D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82FD9A4B1E7D97F400B619D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 				821B35061E7E8D5D00361CE7 /* RecognitionFLViewController.mm */,
 				821B35021E7E860D00361CE7 /* PracticeViewController.h */,
 				821B35031E7E860D00361CE7 /* PracticeViewController.m */,
+				821B350B1E7F263F00361CE7 /* AlgorithmsViewController.h */,
+				821B350C1E7F263F00361CE7 /* AlgorithmsViewController.m */,
+				821B350E1E7F28F800361CE7 /* PLLTableViewCell.h */,
+				821B350F1E7F28F800361CE7 /* PLLTableViewCell.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -319,9 +329,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				821B34FC1E7DBBDE00361CE7 /* PLLRecognizer.m in Sources */,
+				821B35101E7F28F800361CE7 /* PLLTableViewCell.m in Sources */,
 				82FD9A501E7D97F400B619D8 /* MenuViewController.m in Sources */,
 				821B35071E7E8D5D00361CE7 /* RecognitionFLViewController.mm in Sources */,
 				821B34E01E7D9F9900361CE7 /* CaptureViewController.mm in Sources */,
+				821B350D1E7F263F00361CE7 /* AlgorithmsViewController.m in Sources */,
 				82FD9A4D1E7D97F400B619D8 /* AppDelegate.m in Sources */,
 				821B34F31E7DA8B000361CE7 /* CorrectionViewController.mm in Sources */,
 				821B34F01E7DA08E00361CE7 /* EdgeBasedCubeDetector.cpp in Sources */,
