@@ -185,9 +185,11 @@
             return PLLY;
         } else if([self leftIsInnerBlock:pattern] && [self rightIsOuterBlock:pattern]) {
             [self.steps addObject:@"Left is inner and right is outer - Na"];
+            self.adjustment = 0;
             return PLLNa;
         } else {
             [self.steps addObject:@"Left is outer and right is inner - Nb"];
+            self.adjustment = 0;
             return PLLNb;
         }
     } else if (blocks == 1) {
@@ -427,6 +429,7 @@
             } else if([pattern[0] isEqualToString:pattern[4]]) {
                 // there is a checker pattern
                 [self.steps addObject:@"4 colors with checker pattern - Ab"];
+                self.adjustment = 1;
                 return PLLAb;
             } else {
                 // no checker pattern
