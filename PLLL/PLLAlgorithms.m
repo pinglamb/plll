@@ -20,12 +20,13 @@
             // Headlight facing back
             return @"R' U2 R2 U' L' U R' U' L U R' U2 R";
         case PLLAb:
-            // Headlight at right
+            // Headlight at left
             return @"R' U2 R U' L' U R U' L U R2 U2 R";
         case PLLE:
             // Horizontal corners exchange
             return @"R2 U R' U' (y) (R U R' U')2 R U R' (y') R U' R2'";
         case PLLF:
+            // 3x1 facing front
             return @"R' U R U' R2 (y') R' U' R U (y x) R U R' U' R2 (x')";
         case PLLGa:
             // Headlight facing front
@@ -59,7 +60,7 @@
             return @"L U2 L' U2 L F' L' U' L U L F L2";
         case PLLRb:
             // Headlight facing front
-            return @"R' U2 R U2 R' F (R U R' U') R' F' R2' U'";
+            return @"R' U2 R U2 R' F (R U R' U') R' F' R2 U'";
         case PLLUa:
             // 3x1 facing back
             return @"M2 U M U2 M' U M2";

@@ -68,5 +68,6 @@ typedef enum {
 @property int adjustment;
 
 - (PLLCase)recognize:(NSArray *)pattern;
+- (NSString *)adjustmentText;
 
 @end

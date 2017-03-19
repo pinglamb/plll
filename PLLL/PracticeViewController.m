@@ -9,6 +9,7 @@
 #import "PracticeViewController.h"
 #import "PLLRecognizer.h"
 #import "PLLGenerator.h"
+#import "PLLAlgorithms.h"
 
 @interface PracticeViewController ()
 
@@ -35,6 +36,7 @@
 
     self.pllCaseLabel.hidden = YES;
     self.reasonsLabel.hidden = YES;
+    self.algoSectionView.hidden = YES;
     self.showAnswerButton.hidden = NO;
 }
 
@@ -49,8 +51,12 @@
     [self.reasonsLabel sizeToFit];
     [self.pllCaseLabel setText:PLLNames[pll]];
 
+    [self.adjustmentLabel setText:[NSString stringWithFormat:@"Align: [%@]", [recognizer adjustmentText]]];
+    [self.algoLabel setText:[PLLAlgorithms forPLL:pll]];
+
     self.pllCaseLabel.hidden = NO;
     self.reasonsLabel.hidden = NO;
+    self.algoSectionView.hidden = NO;
     self.showAnswerButton.hidden = YES;
 }
 

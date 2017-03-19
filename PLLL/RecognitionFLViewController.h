@@ -27,6 +27,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *pllCaseLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reasonsLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *adjustmentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *algoLabel;
+
 - (IBAction)didPressFirstPatchButton:(UIButton *)sender;
 - (IBAction)didPressSecondPatchButton:(UIButton *)sender;
 - (IBAction)didPressThirdPatchButton:(UIButton *)sender;

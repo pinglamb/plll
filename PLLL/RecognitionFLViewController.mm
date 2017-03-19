@@ -8,6 +8,7 @@
 
 #import "RecognitionFLViewController.h"
 #import "PLLRecognizer.h"
+#import "PLLAlgorithms.h"
 
 @interface RecognitionFLViewController ()
 
@@ -43,6 +44,9 @@
     [self.reasonsLabel setText:[recognizer.steps componentsJoinedByString:@"\n"]];
     [self.reasonsLabel sizeToFit];
     [self.pllCaseLabel setText:PLLNames[pll]];
+
+    [self.adjustmentLabel setText:[NSString stringWithFormat:@"Align: [%@]", [recognizer adjustmentText]]];
+    [self.algoLabel setText:[PLLAlgorithms forPLL:pll]];
 }
 
 - (IBAction)didPressFirstPatchButton:(UIButton *)sender {
