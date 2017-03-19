@@ -168,11 +168,6 @@
         [self.sixColors addObject:[self.faceColors objectAtIndex:19]];
         [self.sixColors addObject:[self.faceColors objectAtIndex:20]];
 
-        NSLog(@"Six Colors:");
-        for (NSString* color in self.sixColors) {
-            NSLog(@"%@", color);
-        }
-
         [self performSegueWithIdentifier:@"recognitionSegue" sender:self];
     } else {
         self.currentFaceIndex = 2;

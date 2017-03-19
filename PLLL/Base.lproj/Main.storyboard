@@ -189,6 +189,7 @@
                         <outlet property="overlayImageView" destination="mj8-SC-5dO" id="CfH-KK-4MK"/>
                         <outlet property="rejectButton" destination="dlr-Cs-ium" id="YBM-vB-Zks"/>
                         <segue destination="c2j-pH-Bdj" kind="show" identifier="correctionSegue" id="9xA-DN-sTA"/>
+                        <segue destination="at0-un-u2P" kind="show" identifier="recognitionFLSegue" id="dCL-9k-78g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLv-ah-DLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,6 +385,173 @@
                 <exit id="qTc-QJ-arl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="966" y="870"/>
+        </scene>
+        <!--RecognitionFL View Controller-->
+        <scene sceneID="psj-bc-vil">
+            <objects>
+                <viewController id="at0-un-u2P" customClass="RecognitionFLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rk0-X7-YK0"/>
+                        <viewControllerLayoutGuide type="bottom" id="gnw-ig-n5B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0hG-1w-m9d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-side PLL Recognition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yo-gZ-eFN">
+                                <rect key="frame" x="61" y="40" width="253" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="rck-bC-rfM">
+                                <rect key="frame" x="16" y="103" width="343" height="49.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlW-QT-78R" userLabel="Red Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="49.5"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FlW-QT-78R" secondAttribute="height" multiplier="1:1" id="sST-GE-CcV"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressFirstPatchButton:" destination="at0-un-u2P" eventType="touchUpInside" id="7SI-v0-qRr"/>
+                                            <action selector="didPressRedColorButton:" destination="c2j-pH-Bdj" eventType="touchUpInside" id="2Lk-Vz-1rn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54q-14-aKP" userLabel="Orange Button">
+                                        <rect key="frame" x="58.5" y="0.0" width="50" height="49.5"/>
+                                        <color key="backgroundColor" red="1" green="0.49823090809999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressSecondPatchButton:" destination="at0-un-u2P" eventType="touchUpInside" id="pGO-Ej-DyR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC5-JO-ZFk" userLabel="Green Button">
+                                        <rect key="frame" x="117.5" y="0.0" width="49.5" height="49.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressThirdPatchButton:" destination="at0-un-u2P" eventType="touchUpInside" id="gtL-HH-4jC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCD-Ur-xGJ" userLabel="Blue Button">
+                                        <rect key="frame" x="176" y="0.0" width="49.5" height="49.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressFourthPatchButton:" destination="at0-un-u2P" eventType="touchUpInside" id="0kK-Iv-cAk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkq-FM-E01" userLabel="Yellow Button">
+                                        <rect key="frame" x="234.5" y="0.0" width="50" height="49.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressFifthPatchButton:" destination="at0-un-u2P" eventType="touchUpInside" id="u4Q-zk-mEB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8W-y7-8Rx" userLabel="White Button">
+                                        <rect key="frame" x="293.5" y="0.0" width="49.5" height="49.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressSixthPatchButton:" destination="at0-un-u2P" eventType="touchUpInside" id="5bf-Bi-sVi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcR-SW-Yla">
+                                <rect key="frame" x="145" y="182.5" width="85.5" height="87.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="64"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 different corner colors - Diag. CP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqb-C6-rnc">
+                                <rect key="frame" x="16" y="300" width="343" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e48-F3-Pn1">
+                                <rect key="frame" x="147" y="587" width="80" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VVt-d0-ab3"/>
+                                    <constraint firstAttribute="width" constant="80" id="gnv-71-P61"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="45"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Qq3-Sl-T52" kind="unwind" unwindAction="actionDidComplete:" id="auc-IL-Bou"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.63921568630000003" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sqb-C6-rnc" firstAttribute="trailing" secondItem="0hG-1w-m9d" secondAttribute="trailingMargin" id="0tR-AY-5FY"/>
+                            <constraint firstItem="kcR-SW-Yla" firstAttribute="top" secondItem="rck-bC-rfM" secondAttribute="bottom" constant="30" id="Mgd-zX-UCI"/>
+                            <constraint firstItem="rck-bC-rfM" firstAttribute="leading" secondItem="0hG-1w-m9d" secondAttribute="leadingMargin" id="N5Z-oe-c0q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rck-bC-rfM" secondAttribute="trailing" id="PaX-Kh-Nl9"/>
+                            <constraint firstItem="sqb-C6-rnc" firstAttribute="top" secondItem="kcR-SW-Yla" secondAttribute="bottom" constant="30" id="Sk8-v0-gRz"/>
+                            <constraint firstItem="0yo-gZ-eFN" firstAttribute="centerX" secondItem="0hG-1w-m9d" secondAttribute="centerX" id="Ujm-CU-xoM"/>
+                            <constraint firstItem="sqb-C6-rnc" firstAttribute="leading" secondItem="0hG-1w-m9d" secondAttribute="leadingMargin" id="VxB-Ow-TLj"/>
+                            <constraint firstItem="gnw-ig-n5B" firstAttribute="top" secondItem="e48-F3-Pn1" secondAttribute="bottom" constant="20" id="XhK-zs-gCc"/>
+                            <constraint firstItem="e48-F3-Pn1" firstAttribute="centerX" secondItem="0hG-1w-m9d" secondAttribute="centerX" id="dyk-xX-ywx"/>
+                            <constraint firstItem="kcR-SW-Yla" firstAttribute="centerX" secondItem="0hG-1w-m9d" secondAttribute="centerX" id="hwf-fb-fy4"/>
+                            <constraint firstItem="rck-bC-rfM" firstAttribute="top" secondItem="0yo-gZ-eFN" secondAttribute="bottom" constant="30" id="j3E-Cw-oim"/>
+                            <constraint firstItem="0yo-gZ-eFN" firstAttribute="top" secondItem="rk0-X7-YK0" secondAttribute="bottom" constant="20" id="p3N-J9-Q6f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fifthColorButton" destination="Gkq-FM-E01" id="MdW-hQ-C2Q"/>
+                        <outlet property="firstColorButton" destination="FlW-QT-78R" id="8V9-SF-ewO"/>
+                        <outlet property="fourthColorButton" destination="aCD-Ur-xGJ" id="Nao-vQ-a0Z"/>
+                        <outlet property="pllCaseLabel" destination="kcR-SW-Yla" id="R4A-Qv-2NY"/>
+                        <outlet property="reasonsLabel" destination="sqb-C6-rnc" id="sVO-tB-25M"/>
+                        <outlet property="secondColorButton" destination="54q-14-aKP" id="JU8-JE-hzZ"/>
+                        <outlet property="sixthColorButton" destination="X8W-y7-8Rx" id="jEu-s6-ree"/>
+                        <outlet property="thirdColorButton" destination="LC5-JO-ZFk" id="uHc-Gj-2oV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AM5-1z-blm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Qq3-Sl-T52" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="-567"/>
         </scene>
         <!--Correction View Controller-->
         <scene sceneID="I9h-H9-fHf">

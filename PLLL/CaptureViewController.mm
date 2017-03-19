@@ -8,6 +8,7 @@
 
 #import "CaptureViewController.h"
 #import "CorrectionViewController.h"
+#import "RecognitionFLViewController.h"
 
 @interface CaptureViewController ()
 
@@ -212,7 +213,8 @@
         [self saveUIImageToDocumentsFolder:faceImage named:fileName];
     }
 
-    [self performSegueWithIdentifier:@"correctionSegue" sender:self];
+    // [self performSegueWithIdentifier:@"correctionSegue" sender:self];
+    [self performSegueWithIdentifier:@"recognitionFLSegue" sender:self];
 }
 
 #pragma mark - Navigation
@@ -222,6 +224,10 @@
         CorrectionViewController *destinationVC = [segue destinationViewController];
         destinationVC.faceColors = self.acceptedColorsArray;
         destinationVC.faceImages = self.faceImagesArray;
+    } else if([segue.identifier isEqual: @"recognitionFLSegue"]) {
+        RecognitionFLViewController *vc = [segue destinationViewController];
+        vc.faceColors = self.acceptedColorsArray;
+        vc.faceImages = self.faceImagesArray;
     }
 }
 
