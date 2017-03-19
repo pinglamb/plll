@@ -252,6 +252,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="didPressFirstPatchButton:" destination="AdO-Zc-ZWg" eventType="touchUpInside" id="Jri-gs-eja"/>
                                             <action selector="didPressRedColorButton:" destination="c2j-pH-Bdj" eventType="touchUpInside" id="aI0-38-Pre"/>
                                         </connections>
                                     </button>
@@ -263,6 +264,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressSecondPatchButton:" destination="AdO-Zc-ZWg" eventType="touchUpInside" id="ve8-px-dxE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhp-ix-h45" userLabel="Green Button">
                                         <rect key="frame" x="117.5" y="0.0" width="49.5" height="49.5"/>
@@ -272,6 +276,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressThirdPatchButton:" destination="AdO-Zc-ZWg" eventType="touchUpInside" id="QSV-Zi-eHn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-pp-S5q" userLabel="Blue Button">
                                         <rect key="frame" x="176" y="0.0" width="49.5" height="49.5"/>
@@ -281,6 +288,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressFourthPatchButton:" destination="AdO-Zc-ZWg" eventType="touchUpInside" id="VLt-RS-U0a"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIq-FD-BjQ" userLabel="Yellow Button">
                                         <rect key="frame" x="234.5" y="0.0" width="50" height="49.5"/>
@@ -290,6 +300,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressFifthPatchButton:" destination="AdO-Zc-ZWg" eventType="touchUpInside" id="zKX-aJ-old"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-mC-o5k" userLabel="White Button">
                                         <rect key="frame" x="293.5" y="0.0" width="49.5" height="49.5"/>
@@ -299,6 +312,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressSixthPatchButton:" destination="AdO-Zc-ZWg" eventType="touchUpInside" id="EDF-47-9AE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

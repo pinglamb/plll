@@ -27,12 +27,7 @@
 
 - (void)generateAndShow {
     self.sixColors = [PLLGenerator generate];
-    [self.firstColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[0]]];
-    [self.secondColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[1]]];
-    [self.thirdColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[2]]];
-    [self.fourthColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[3]]];
-    [self.fifthColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[4]]];
-    [self.sixthColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[5]]];
+    [self display];
 
     self.pllCaseLabel.hidden = YES;
     self.reasonsLabel.hidden = YES;
@@ -45,6 +40,81 @@
 }
 
 - (IBAction)showDidTap:(UIButton *)sender {
+    [self recognize];
+    self.pllCaseLabel.hidden = NO;
+    self.reasonsLabel.hidden = NO;
+    self.algoSectionView.hidden = NO;
+    self.showAnswerButton.hidden = YES;
+}
+
+- (IBAction)didPressFirstPatchButton:(UIButton *)sender {
+    self.selectedButton = sender;
+    self.selectedIndex = 0;
+    [self presentPicker];
+}
+
+- (IBAction)didPressSecondPatchButton:(UIButton *)sender {
+    self.selectedButton = sender;
+    self.selectedIndex = 1;
+    [self presentPicker];
+}
+- (IBAction)didPressThirdPatchButton:(UIButton *)sender {
+    self.selectedButton = sender;
+    self.selectedIndex = 2;
+    [self presentPicker];
+}
+- (IBAction)didPressFourthPatchButton:(UIButton *)sender {
+    self.selectedButton = sender;
+    self.selectedIndex = 3;
+    [self presentPicker];
+}
+- (IBAction)didPressFifthPatchButton:(UIButton *)sender {
+    self.selectedButton = sender;
+    self.selectedIndex = 4;
+    [self presentPicker];
+}
+- (IBAction)didPressSixthPatchButton:(UIButton *)sender {
+    self.selectedButton = sender;
+    self.selectedIndex = 5;
+    [self presentPicker];
+}
+
+- (void)presentPicker {
+    UIAlertController *sheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [sheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }]];
+    [sheet addAction:[UIAlertAction actionWithTitle:@"Red" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self updateColor:@"R"];
+    }]];
+    [sheet addAction:[UIAlertAction actionWithTitle:@"Green" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self updateColor:@"G"];
+    }]];
+    [sheet addAction:[UIAlertAction actionWithTitle:@"Orange" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self updateColor:@"O"];
+    }]];
+    [sheet addAction:[UIAlertAction actionWithTitle:@"Blue" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self updateColor:@"B"];
+    }]];
+
+    [self presentViewController:sheet animated:YES completion:nil];
+}
+
+- (void)updateColor:(NSString *)color {
+    [self.sixColors replaceObjectAtIndex:self.selectedIndex withObject:color];
+    [self display];
+    [self recognize];
+}
+
+- (void) display {
+    [self.firstColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[0]]];
+    [self.secondColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[1]]];
+    [self.thirdColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[2]]];
+    [self.fourthColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[3]]];
+    [self.fifthColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[4]]];
+    [self.sixthColorButton setBackgroundColor:[self getUIColorFromString:self.sixColors[5]]];
+}
+
+- (void) recognize {
     PLLRecognizer *recognizer = [[PLLRecognizer alloc] init];
     PLLCase pll = [recognizer recognize:self.sixColors];
     [self.reasonsLabel setText:[recognizer.steps componentsJoinedByString:@"\n"]];
@@ -53,11 +123,6 @@
 
     [self.adjustmentLabel setText:[NSString stringWithFormat:@"Align: [%@]", [recognizer adjustmentText]]];
     [self.algoLabel setText:[PLLAlgorithms forPLL:pll]];
-
-    self.pllCaseLabel.hidden = NO;
-    self.reasonsLabel.hidden = NO;
-    self.algoSectionView.hidden = NO;
-    self.showAnswerButton.hidden = YES;
 }
 
 - (UIColor*) getUIColorFromString: (NSString*) stringRepresentation {

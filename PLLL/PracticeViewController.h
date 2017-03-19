@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *fifthColorButton;
 @property (weak, nonatomic) IBOutlet UIButton *sixthColorButton;
 
+@property (weak, nonatomic) UIButton *selectedButton;
+@property int selectedIndex;
+
 @property (weak, nonatomic) IBOutlet UILabel *pllCaseLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reasonsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *showAnswerButton;
@@ -27,5 +30,12 @@
 
 - (IBAction)randomDidTap:(UIButton *)sender;
 - (IBAction)showDidTap:(UIButton *)sender;
+
+- (IBAction)didPressFirstPatchButton:(UIButton *)sender;
+- (IBAction)didPressSecondPatchButton:(UIButton *)sender;
+- (IBAction)didPressThirdPatchButton:(UIButton *)sender;
+- (IBAction)didPressFourthPatchButton:(UIButton *)sender;
+- (IBAction)didPressFifthPatchButton:(UIButton *)sender;
+- (IBAction)didPressSixthPatchButton:(UIButton *)sender;
 
 @end
