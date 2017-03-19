@@ -117,6 +117,7 @@
             return PLLUb;
         } else {
             [self.steps addObject:@"Adjacent color between headlight - Ua"];
+            self.adjustment = 2;
             return PLLUa;
         }
     } else if([self rightIs3x1:pattern]) {
@@ -135,6 +136,7 @@
             return PLLH;
         } else if([self isOppositeFor:pattern[0] and:pattern[1]]) {
             [self.steps addObject:@"Only left side has opposite color between headlight - Ub"];
+            self.adjustment = 1;
             return PLLUb;
         } else if([self isOppositeFor:pattern[3] and:pattern[4]]) {
             [self.steps addObject:@"Only right side has opposite color between headlight - Ua"];
@@ -146,12 +148,15 @@
                 return PLLZ;
             } else if([pattern[1] isEqualToString:pattern[3]]) {
                 [self.steps addObject:@"Checker pattern on left side only - Ua"];
+                self.adjustment = 1;
                 return PLLUa;
             } else if([pattern[2] isEqualToString:pattern[4]]) {
                 [self.steps addObject:@"Checker pattern on right side only - Ub"];
+                self.adjustment = 0;
                 return PLLUb;
             } else {
                 [self.steps addObject:@"No Checker pattern - Z"];
+                self.adjustment = 0;
                 return PLLZ;
             }
         }
@@ -187,9 +192,11 @@
         [self.steps addObject:@"One 2x1 block"];
         if([self leftIsOuterBlock:pattern] || [self rightIsOuterBlock:pattern]) {
             [self.steps addObject:@"Outer 2x1 block - V"];
+            self.adjustment = 2;
             return PLLV;
         } else {
             [self.steps addObject:@"Inner 2x1 block - Y"];
+            self.adjustment = -1;
             return PLLY;
         }
     } else {
@@ -217,6 +224,7 @@
             return PLLJa;
         } else {
             [self.steps addObject:@"Right is outer 2x1 - Jb"];
+            self.adjustment = 1;
             return PLLJb;
         }
     } else if([self rightIs3x1:pattern]) {
@@ -226,11 +234,12 @@
             return PLLJb;
         } else {
             [self.steps addObject:@"Left is outer 2x1 - Ja"];
+            self.adjustment = 0;
             return PLLJa;
         }
     } else if([self leftIsOuterBlock:pattern]) {
         [self.steps addObject:@"Left outer, right inner - Ja"];
-        self.adjustment = 2;
+        self.adjustment = 1;
         return PLLJa;
     } else if([self rightIsOuterBlock:pattern]) {
         [self.steps addObject:@"Left outer, right inner - Jb"];
@@ -285,6 +294,7 @@
             return PLLAa;
         } else {
             [self.steps addObject:@"Four unique colors - Ga"];
+            self.adjustment = 0;
             return PLLGa;
         }
     }
@@ -330,6 +340,7 @@
             return PLLGb;
         } else {
             [self.steps addObject:@"Adjacent color beside the block - Ga"];
+            self.adjustment = -1;
             return PLLGa;
         }
     } else if([self rightIsInnerBlock:pattern]) {
@@ -337,7 +348,7 @@
         [self.steps addObject:@"Right Inner Block"];
         if([self isOppositeFor:pattern[4] and:pattern[5]]) {
             [self.steps addObject:@"Opposite color beside the block - Gd"];
-            self.adjustment = 2;
+            self.adjustment = 1;
             return PLLGd;
         } else {
             [self.steps addObject:@"Adjacent color beside the block - Gc"];
@@ -436,6 +447,7 @@
             } else {
                 // no checker pattern
                 [self.steps addObject:@"4 colors without checker pattern - Ga"];
+                self.adjustment = 1;
                 return PLLGa;
             }
         }
@@ -453,13 +465,15 @@
         return PLLGc;
     } else if([self isOppositeFor:pattern[1] and:pattern[2]]) {
         [self.steps addObject:@"Left inner block is in opposite color - Rb"];
+        self.adjustment = -1;
         return PLLRb;
     } else if([self isOppositeFor:pattern[3] and:pattern[4]]) {
         [self.steps addObject:@"Right inner block is in opposite color - Ra"];
         return PLLGc;
     } else {
         [self.steps addObject:@"Right outer block is in opposite color - Ga"];
-        return PLLGc;
+        self.adjustment = 2;
+        return PLLGa;
     }
 }
 
