@@ -113,6 +113,21 @@
                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEx-k7-UKI" userLabel="Capture Photo Button">
+                                <rect key="frame" x="309" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JdM-gM-wGt">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="50" id="UcU-UO-QsM">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" image="camera-button"/>
+                                <connections>
+                                    <action selector="didPressCaptureImage:" destination="FKb-Hj-m7f" eventType="touchUpInside" id="8Ca-a2-F1r"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uy-D8-fha">
                                 <rect key="frame" x="115" y="597" width="145" height="50"/>
                                 <subviews>
@@ -150,19 +165,21 @@
                                     <constraint firstItem="dlr-Cs-ium" firstAttribute="height" secondItem="08G-is-ocX" secondAttribute="height" id="z6M-wA-ToH"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEx-k7-UKI" userLabel="Capture Photo Button">
-                                <rect key="frame" x="162.5" y="597" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjk-nK-GTW">
+                                <rect key="frame" x="16" y="597" width="63" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JdM-gM-wGt">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="50" id="UcU-UO-QsM">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
-                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="rhM-qG-Yjv"/>
                                 </constraints>
-                                <state key="normal" image="camera-button"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="45"/>
+                                </variation>
                                 <connections>
-                                    <action selector="didPressCaptureImage:" destination="FKb-Hj-m7f" eventType="touchUpInside" id="8Ca-a2-F1r"/>
+                                    <action selector="didPressPreviousFaceButton:" destination="c2j-pH-Bdj" eventType="touchUpInside" id="mcG-Vs-82h"/>
+                                    <segue destination="h7n-JN-pbJ" kind="unwind" unwindAction="actionDidComplete:" id="0lT-fx-9FH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -174,10 +191,12 @@
                             <constraint firstItem="tEE-0s-rAP" firstAttribute="top" secondItem="mj8-SC-5dO" secondAttribute="bottom" id="Ikz-N8-fwD"/>
                             <constraint firstAttribute="trailing" secondItem="mj8-SC-5dO" secondAttribute="trailing" id="MBh-ks-ax2"/>
                             <constraint firstItem="mj8-SC-5dO" firstAttribute="leading" secondItem="CXD-Cc-U1W" secondAttribute="leading" id="Yw1-Oz-hsg"/>
+                            <constraint firstItem="Xjk-nK-GTW" firstAttribute="centerY" secondItem="6uy-D8-fha" secondAttribute="centerY" id="Znu-xc-TIY"/>
                             <constraint firstItem="6uy-D8-fha" firstAttribute="centerX" secondItem="CXD-Cc-U1W" secondAttribute="centerX" id="b5e-JB-dZs"/>
+                            <constraint firstItem="Xjk-nK-GTW" firstAttribute="leading" secondItem="CXD-Cc-U1W" secondAttribute="leadingMargin" id="hAC-RX-25B"/>
                             <constraint firstItem="mj8-SC-5dO" firstAttribute="top" secondItem="CXD-Cc-U1W" secondAttribute="top" id="l35-SP-nKL"/>
                             <constraint firstItem="bEx-k7-UKI" firstAttribute="centerY" secondItem="6uy-D8-fha" secondAttribute="centerY" id="l5G-C0-Hie"/>
-                            <constraint firstItem="bEx-k7-UKI" firstAttribute="centerX" secondItem="CXD-Cc-U1W" secondAttribute="centerX" id="vL2-KE-hzU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bEx-k7-UKI" secondAttribute="trailing" id="tZx-5b-nyF"/>
                             <constraint firstAttribute="trailing" secondItem="12J-TP-vhv" secondAttribute="trailing" constant="10" id="z42-7R-cf3"/>
                         </constraints>
                     </view>
@@ -193,6 +212,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLv-ah-DLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="h7n-JN-pbJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="965.60000000000002" y="138.98050974512745"/>
         </scene>
