@@ -21,7 +21,7 @@
     self.steps = [[NSMutableArray alloc] init];
     switch ([self cpRecognize:pattern]) {
         case 0:
-            break;
+            return [self epllRecognize:pattern];
         case 1:
             return [self diagCpRecognize:pattern];
         case 2:

@@ -14,6 +14,10 @@
 
 @implementation MenuViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
 - (IBAction)actionDidComplete:(UIStoryboardSegue *)segue {
 }
 

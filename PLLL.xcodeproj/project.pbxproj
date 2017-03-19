@@ -15,6 +15,8 @@
 		821B34F31E7DA8B000361CE7 /* CorrectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 821B34F21E7DA8B000361CE7 /* CorrectionViewController.mm */; };
 		821B34F61E7DB5C600361CE7 /* RecognitionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */; };
 		821B34FC1E7DBBDE00361CE7 /* PLLRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 821B34FB1E7DBBDE00361CE7 /* PLLRecognizer.m */; };
+		821B35001E7E78C400361CE7 /* PLLGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 821B34FF1E7E78C400361CE7 /* PLLGenerator.m */; };
+		821B35041E7E860D00361CE7 /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821B35031E7E860D00361CE7 /* PracticeViewController.m */; };
 		82FD9A4A1E7D97F400B619D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A491E7D97F400B619D8 /* main.m */; };
 		82FD9A4D1E7D97F400B619D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A4C1E7D97F400B619D8 /* AppDelegate.m */; };
 		82FD9A501E7D97F400B619D8 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD9A4F1E7D97F400B619D8 /* MenuViewController.m */; };
@@ -41,6 +43,10 @@
 		821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecognitionViewController.mm; sourceTree = "<group>"; };
 		821B34FB1E7DBBDE00361CE7 /* PLLRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLLRecognizer.m; sourceTree = "<group>"; };
 		821B34FE1E7DBC2300361CE7 /* PLLRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLLRecognizer.h; sourceTree = "<group>"; };
+		821B34FF1E7E78C400361CE7 /* PLLGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLLGenerator.m; sourceTree = "<group>"; };
+		821B35011E7E78D300361CE7 /* PLLGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLLGenerator.h; sourceTree = "<group>"; };
+		821B35021E7E860D00361CE7 /* PracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeViewController.h; sourceTree = "<group>"; };
+		821B35031E7E860D00361CE7 /* PracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeViewController.m; sourceTree = "<group>"; };
 		82FD9A451E7D97F400B619D8 /* PLLL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLLL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FD9A491E7D97F400B619D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82FD9A4B1E7D97F400B619D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 				821B34F21E7DA8B000361CE7 /* CorrectionViewController.mm */,
 				821B34F41E7DB5C600361CE7 /* RecognitionViewController.h */,
 				821B34F51E7DB5C600361CE7 /* RecognitionViewController.mm */,
+				821B35021E7E860D00361CE7 /* PracticeViewController.h */,
+				821B35031E7E860D00361CE7 /* PracticeViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -144,13 +152,15 @@
 			isa = PBXGroup;
 			children = (
 				821B34F81E7DBB8700361CE7 /* View Controllers */,
+				821B34FE1E7DBC2300361CE7 /* PLLRecognizer.h */,
+				821B34FB1E7DBBDE00361CE7 /* PLLRecognizer.m */,
+				821B34FF1E7E78C400361CE7 /* PLLGenerator.m */,
+				821B35011E7E78D300361CE7 /* PLLGenerator.h */,
 				82FD9A511E7D97F400B619D8 /* Main.storyboard */,
 				82FD9A541E7D97F400B619D8 /* Assets.xcassets */,
 				82FD9A561E7D97F400B619D8 /* LaunchScreen.storyboard */,
 				82FD9A591E7D97F400B619D8 /* Info.plist */,
 				82FD9A481E7D97F400B619D8 /* Supporting Files */,
-				821B34FE1E7DBC2300361CE7 /* PLLRecognizer.h */,
-				821B34FB1E7DBBDE00361CE7 /* PLLRecognizer.m */,
 			);
 			path = PLLL;
 			sourceTree = "<group>";
@@ -304,8 +314,10 @@
 				82FD9A4D1E7D97F400B619D8 /* AppDelegate.m in Sources */,
 				821B34F31E7DA8B000361CE7 /* CorrectionViewController.mm in Sources */,
 				821B34F01E7DA08E00361CE7 /* EdgeBasedCubeDetector.cpp in Sources */,
+				821B35001E7E78C400361CE7 /* PLLGenerator.m in Sources */,
 				82FD9A4A1E7D97F400B619D8 /* main.m in Sources */,
 				821B34F61E7DB5C600361CE7 /* RecognitionViewController.mm in Sources */,
+				821B35041E7E860D00361CE7 /* PracticeViewController.m in Sources */,
 				821B34EF1E7DA08E00361CE7 /* ColorDetector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

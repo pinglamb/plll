@@ -1,0 +1,27 @@
+//
+//  PracticeViewController.h
+//  PLLL
+//
+//  Created by pinglamb on 19/3/2017.
+//  Copyright © 2017 Ging Team. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface PracticeViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIButton *firstColorButton;
+@property (weak, nonatomic) IBOutlet UIButton *secondColorButton;
+@property (weak, nonatomic) IBOutlet UIButton *thirdColorButton;
+@property (weak, nonatomic) IBOutlet UIButton *fourthColorButton;
+@property (weak, nonatomic) IBOutlet UIButton *fifthColorButton;
+@property (weak, nonatomic) IBOutlet UIButton *sixthColorButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *pllCaseLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reasonsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *showAnswerButton;
+
+- (IBAction)randomDidTap:(UIButton *)sender;
+- (IBAction)showDidTap:(UIButton *)sender;
+
+@end
