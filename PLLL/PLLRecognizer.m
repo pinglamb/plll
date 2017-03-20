@@ -225,7 +225,7 @@
             self.adjustment = 1;
             return PLLV;
         } else if([pattern[0] isEqualToString:pattern[4]] && [pattern[1] isEqualToString:pattern[5]]) {
-            [self.steps addObject:@"Inner blocks have checker pattern - Y"];
+            [self.steps addObject:@"Outer blocks have checker pattern - Y"];
             self.adjustment = 2;
             return PLLY;
         } else {
