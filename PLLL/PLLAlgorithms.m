@@ -68,10 +68,10 @@
             // 3x1 facing back
             return @"M2 U' M U2 M' U' M2";
         case PLLV:
-            // 2 Inner blocks on left
-            return @"R' U2 R U2 L U' R' U L' U L U' R U L'";
+            // 2 Inner blocks on back and right
+            return @"R U' L' U R' U' R U' L U R' U2 L' U2 L";
         case PLLY:
-            // 2 Outer blocks on right
+            // 2 Outer blocks on front and right
             return @"F R U' R' U' R U R' F' R U R' U' R' F R F'";
         case PLLZ:
             return @"M2' U2 M' U M2' U M2' U M'";
@@ -119,9 +119,9 @@
         case PLLUb:
             return @"3x1 block facing back";
         case PLLV:
-            return @"2 Inner blocks on left";
+            return @"2 Inner blocks on back and right";
         case PLLY:
-            return @"2 Outer blocks on right";
+            return @"2 Outer blocks on front and right";
         case PLLZ:
             return @"Exchange left and front";
         default:

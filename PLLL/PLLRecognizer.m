@@ -184,7 +184,7 @@
         [self.steps addObject:@"Two 2x1 blocks"];
         if([self leftIsInnerBlock:pattern] && [self rightIsInnerBlock:pattern]) {
             [self.steps addObject:@"Both are inner blocks - V"];
-            self.adjustment = 1;
+            self.adjustment = -1;
             return PLLV;
         } else if([self leftIsOuterBlock:pattern] && [self rightIsOuterBlock:pattern]) {
             [self.steps addObject:@"Both are outer blocks - Y"];
@@ -203,11 +203,11 @@
         [self.steps addObject:@"One 2x1 block"];
         if([self leftIsOuterBlock:pattern]) {
             [self.steps addObject:@"Left outer 2x1 block - V"];
-            self.adjustment = 0;
+            self.adjustment = 2;
             return PLLV;
         } else if([self rightIsOuterBlock:pattern]) {
             [self.steps addObject:@"Right outer 2x1 block - V"];
-            self.adjustment = 2;
+            self.adjustment = 0;
             return PLLV;
         } else if([self leftIsInnerBlock:pattern]) {
             [self.steps addObject:@"Left Inner 2x1 block - Y"];
@@ -222,7 +222,7 @@
         [self.steps addObject:@"No blocks"];
         if([pattern[1] isEqualToString:pattern[3]] && [pattern[2] isEqualToString:pattern[4]]) {
             [self.steps addObject:@"Inner blocks have checker pattern - V"];
-            self.adjustment = -1;
+            self.adjustment = 1;
             return PLLV;
         } else if([pattern[0] isEqualToString:pattern[4]] && [pattern[1] isEqualToString:pattern[5]]) {
             [self.steps addObject:@"Inner blocks have checker pattern - Y"];
