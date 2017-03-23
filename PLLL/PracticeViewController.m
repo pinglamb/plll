@@ -33,6 +33,7 @@
     self.reasonsLabel.hidden = YES;
     self.algoSectionView.hidden = YES;
     self.showAnswerButton.hidden = NO;
+    self.randomButton.hidden = YES;
 }
 
 - (IBAction)randomDidTap:(UIButton *)sender {
@@ -45,6 +46,7 @@
     self.reasonsLabel.hidden = NO;
     self.algoSectionView.hidden = NO;
     self.showAnswerButton.hidden = YES;
+    self.randomButton.hidden = NO;
 }
 
 - (IBAction)didPressFirstPatchButton:(UIButton *)sender {

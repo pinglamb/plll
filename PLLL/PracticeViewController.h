@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *reasonsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *showAnswerButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *randomButton;
+
 @property (weak, nonatomic) IBOutlet UIView *algoSectionView;
 @property (weak, nonatomic) IBOutlet UILabel *adjustmentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *algoLabel;

@@ -404,12 +404,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjs-nz-wc1">
-                                <rect key="frame" x="124" y="304" width="126" height="60"/>
+                                <rect key="frame" x="279" y="587" width="80" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8OQ-G4-Pta"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="GSz-s5-7hm"/>
+                                    <constraint firstAttribute="width" constant="80" id="Wae-ra-icQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="Show Answer">
+                                <state key="normal" title="Answer">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -428,8 +430,8 @@
                             <constraint firstItem="lNs-Df-MWx" firstAttribute="top" secondItem="HPq-ia-cTC" secondAttribute="bottom" constant="30" id="9xi-x1-6la"/>
                             <constraint firstItem="QLn-QS-Gyv" firstAttribute="top" secondItem="lNs-Df-MWx" secondAttribute="bottom" constant="30" id="CsO-jz-UiW"/>
                             <constraint firstItem="QLn-QS-Gyv" firstAttribute="centerX" secondItem="Zzx-Ic-erA" secondAttribute="centerX" id="FGj-pF-kzl"/>
-                            <constraint firstItem="Jjs-nz-wc1" firstAttribute="centerX" secondItem="Zzx-Ic-erA" secondAttribute="centerX" id="JF9-Xp-cke"/>
                             <constraint firstItem="8Iz-OR-54x" firstAttribute="trailing" secondItem="Zzx-Ic-erA" secondAttribute="trailingMargin" id="LYs-Mk-SCO"/>
+                            <constraint firstItem="Jjs-nz-wc1" firstAttribute="trailing" secondItem="Zzx-Ic-erA" secondAttribute="trailingMargin" id="NeO-UZ-H0y"/>
                             <constraint firstItem="PZ0-cn-i3c" firstAttribute="trailing" secondItem="Zzx-Ic-erA" secondAttribute="trailingMargin" id="Ofw-Hx-9Vz"/>
                             <constraint firstItem="y4B-Tj-cRZ" firstAttribute="trailing" secondItem="Zzx-Ic-erA" secondAttribute="trailingMargin" id="Ona-GG-oLG"/>
                             <constraint firstItem="y4B-Tj-cRZ" firstAttribute="leading" secondItem="Zzx-Ic-erA" secondAttribute="leadingMargin" id="YA1-EG-6oM"/>
@@ -440,8 +442,8 @@
                             <constraint firstItem="6z5-rl-kEl" firstAttribute="top" secondItem="azF-Gc-bfJ" secondAttribute="bottom" constant="20" id="nSg-UH-7H3"/>
                             <constraint firstItem="azF-Gc-bfJ" firstAttribute="leading" secondItem="Zzx-Ic-erA" secondAttribute="leadingMargin" id="s0a-7w-KYU"/>
                             <constraint firstItem="lNs-Df-MWx" firstAttribute="leading" secondItem="Zzx-Ic-erA" secondAttribute="leadingMargin" id="tM8-s8-Jch"/>
-                            <constraint firstItem="Jjs-nz-wc1" firstAttribute="centerY" secondItem="Zzx-Ic-erA" secondAttribute="centerY" id="wmR-kv-WeR"/>
                             <constraint firstItem="y4B-Tj-cRZ" firstAttribute="top" secondItem="8Iz-OR-54x" secondAttribute="bottom" constant="50" id="yR9-wK-Q8L"/>
+                            <constraint firstItem="6z5-rl-kEl" firstAttribute="top" secondItem="Jjs-nz-wc1" secondAttribute="bottom" constant="20" id="zLY-20-zYR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -452,6 +454,7 @@
                         <outlet property="firstColorButton" destination="Sq9-gD-Naw" id="KVm-O8-591"/>
                         <outlet property="fourthColorButton" destination="ig2-pp-S5q" id="Sl7-hd-4C4"/>
                         <outlet property="pllCaseLabel" destination="QLn-QS-Gyv" id="4mU-a3-Bdg"/>
+                        <outlet property="randomButton" destination="PZ0-cn-i3c" id="8kU-3M-LXv"/>
                         <outlet property="reasonsLabel" destination="8Iz-OR-54x" id="v7m-xy-Kej"/>
                         <outlet property="secondColorButton" destination="JuN-OV-ZVL" id="B47-Ap-AZE"/>
                         <outlet property="showAnswerButton" destination="Jjs-nz-wc1" id="HNy-eK-jlp"/>
